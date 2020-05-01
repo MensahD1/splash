@@ -1,12 +1,12 @@
-class Game:
+class Season:
     def __init__(self,dict):
 
         self.dict = dict
-        self.date = dict["date"]
-        self.wasHome = dict["wasHome"]
-        self.rival = dict["opponent"]
-        self.wasWin = dict["wasWin"]
-        self.netScore = dict["netScore"]
+        self.year = dict["year"]
+        self.age = dict["age"]
+        self.team = dict["team"]
+        self.position = dict["position"]
+        self.GP = dict["GP"]
         self.MP = dict["MP"]
         self.threeP = dict["3P"]
         self.threePA= dict["3PA"]
@@ -22,18 +22,24 @@ class Game:
         self.TOV = dict["TOV"]
         self.PF = dict["PF"]
         self.PTS = dict["PTS"]
-        self.rivalRoster = dict["opponentRoster"]
-        self.wasPlayoff = dict["wasPlayoff"]
+        self.link = dict["link"]
+        self.games = dict["games"]
+        self.salary = dict["salary"]
+        self.roster = dict["roster"]
+        self.wentPlayoffs = dict["wentPlayoffs"]
+        self.wasChamp = dict["wasChamp"]
         self.extra = []
 
-    def getGame(self):
-        return self.date
-    def getOpponent(self):
-        return self.rival
-    def isHome(self):
-        return self.wasHome
-    def isWin(self):
-        return self.wasWin
+    def getYear(self):
+        return self.year
+    def getAge(self):
+        return self.age
+    def getTeam(self):
+        return self.team
+    def getPosition(self):
+        return self.position
+    def getGP(self):
+        return self.GP
     def getMP(self):
         return self.MP
     def get3P(self):
@@ -78,9 +84,17 @@ class Game:
         return self.PF
     def getPTS(self):
         return self.PTS
-    def isPlayoff(self):
-        return self.wasPlayoff
-    def getRivalRoster(self):
-        return self.rivalRoster
+    def getLink(self):
+        return self.link
+    def getGames(self):
+        return self.games
+    def getSalary(self):
+        return self.salary
+    def getRoster(self):
+        return self.roster
+    def isPlayoffs(self):
+        return self.wentPlayoffs
+    def isChamp(self):
+        return self.wasChamp
     def getAll(self):
         return self.dict
